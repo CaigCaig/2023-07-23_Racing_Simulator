@@ -17,12 +17,10 @@ constexpr auto TOTAL_VEHICLES = 7;
 class Racing {
 private:
 	enum class RACING_TYPE {GROUND, AERIAL, MIXED};
-	//int n;
 	RACING_TYPE racing_type;
 	int distance;
 	int reg_vehicles;
 	bool reg_arr[TOTAL_VEHICLES];
-	int n;
 	void Vehicle_Registration(void);
 public:
 	void Select_Racing_Type(void);

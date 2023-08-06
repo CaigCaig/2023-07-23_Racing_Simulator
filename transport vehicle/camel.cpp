@@ -35,11 +35,6 @@ namespace Transport_Vehicles
 	};
 	Camel::Camel()
 	{
-		//this->tv_speed = 10;
-		//this->driving_time_before_rest = 30;
-		//this->rest_duration_1 = 5;
-		//this->rest_duration_2 = 8;
-		//this->rest_duration_n = 8;
 		this->name = "Верблюд";
 		this->vehicle_type = Vehicles::TV_GROUND;
 		this->registration = false;

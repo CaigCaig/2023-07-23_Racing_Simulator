@@ -8,10 +8,8 @@ namespace Transport_Vehicles
 	protected:
 		Vehicles vehicle_type;
 		bool registration;
-		//int tv_speed;
 		std::string name;
 	public:
-		//TVLIB_API int get_speed();
 		TVLIB_API Vehicles get_vehicle_type();
 		TVLIB_API std::string get_name();
 		TVLIB_API void set_registration(bool reg);

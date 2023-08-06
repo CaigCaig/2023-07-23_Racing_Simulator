@@ -35,11 +35,6 @@ namespace Transport_Vehicles
 	};
 	Boots_ATVs::Boots_ATVs()
 	{
-		/*tv_speed = 6;
-		driving_time_before_rest = 60;
-		rest_duration_1 = 10;
-		rest_duration_2 = 5;
-		rest_duration_n = 5;*/
 		name = "Ботинки-вездеходы";
 		vehicle_type = Vehicles::TV_GROUND;
 		registration = false;

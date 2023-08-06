@@ -14,7 +14,7 @@ Transport_Vehicles::Carpet_Plane carpet_plane;
 
 void Racing::Select_Racing_Type()
 {
-	int n;
+	int n = 0;
 	do {
 		system("cls");
 		cout << "Добро пожаловать в гоночный симулятор!" << endl;
@@ -80,10 +80,10 @@ void Racing::Start_Racing(void)
 			}
 		}
 	}
-	int x = 1;
+	int n = 1;
 	for (int i = 0; i < TOTAL_VEHICLES; i++) {
 		if (time[i] > 0) {
-			cout << x << ". ";
+			cout << n << ". ";
 			switch (tv[i]) {
 			case 1:
 				cout << boots.get_name() << ". Время: " << time[i];
@@ -108,7 +108,7 @@ void Racing::Start_Racing(void)
 				break;
 			}
 			cout << endl;
-			x++;
+			n++;
 		}
 	}
 	cout << endl;
@@ -126,12 +126,11 @@ void Racing::Init(void)
 	distance = 0;
 	reg_vehicles = 0;
 	for (int i = 0; i < TOTAL_VEHICLES; i++) reg_arr[i] = false;
-	n = 1000;
 }
 
 void Racing::Vehicles_Registration(void)
 {
-	int x = NOT_REGISTRATION;
+	int n = NOT_REGISTRATION;
 	const string str = "1. Зарегистрировать транспорт";
 	do
 	{
@@ -146,37 +145,37 @@ void Racing::Vehicles_Registration(void)
 			cout << "2. Начать гонку" << endl;
 		}
 		cout << "Выберите действие: ";
-		cin >> x;
-		if (x == REGISTRATION)
+		cin >> n;
+		if (n == REGISTRATION)
 		{
 			Racing::Vehicle_Registration();
-			x = NOT_REGISTRATION;
+			n = NOT_REGISTRATION;
 		}
 		if (reg_vehicles < 2)
 		{
-			x = NOT_REGISTRATION;
+			n = NOT_REGISTRATION;
 		}
-	} while (x != START_RACING);
+	} while (n != START_RACING);
 }
 
 void Racing::Vehicle_Registration()
 {
-	int x = 0;
+	int n = 0;
 	bool reg_f = true;
 	string name;
 
 	do {
 		system("cls");
-		if ((x > 0) && (x <= TOTAL_VEHICLES))
+		if ((n > 0) && (n <= TOTAL_VEHICLES))
 		{
-			if (reg_arr[x - 1] == true)
+			if (reg_arr[n - 1] == true)
 			{
 				cout << name << " уже зарегистрирован!" << endl;
 			}
 			else
 			{
 				reg_f = false;
-				switch (x)
+				switch (n)
 				{
 				case 1:
 					if ((this->racing_type == RACING_TYPE::GROUND) || (this->racing_type == RACING_TYPE::MIXED))
@@ -234,7 +233,7 @@ void Racing::Vehicle_Registration()
 				}
 				else
 				{
-					reg_arr[x - 1] = true;
+					reg_arr[n - 1] = true;
 					reg_vehicles++;
 				}
 			}
@@ -305,8 +304,8 @@ void Racing::Vehicle_Registration()
 		cout << "7. Ковёр-самолёт" << endl;
 		cout << "0. Закончить регистрацию" << endl;
 		cout << "Выберите транспорт или 0 для окончания процесса регистрации: ";
-		cin >> x;
-	} while ((x > 0) && (x <= TOTAL_VEHICLES));
+		cin >> n;
+	} while ((n > 0) && (n <= TOTAL_VEHICLES));
 }
 
 Racing::Racing()
@@ -315,5 +314,4 @@ Racing::Racing()
 	racing_type = RACING_TYPE::MIXED;
 	reg_vehicles = 0;
 	for (int i = 0; i < TOTAL_VEHICLES; i++) reg_arr[i] = false;
-	n = 1000;
 }

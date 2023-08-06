@@ -43,11 +43,6 @@ namespace Transport_Vehicles
 	}
 	Camel_Speeder::Camel_Speeder()
 	{
-		/*this->tv_speed = 40;
-		this->driving_time_before_rest = 10;
-		this->rest_duration_1 = 5;
-		this->rest_duration_2 = 6.5;
-		this->rest_duration_n = 8;*/
 		this->name = "Верблюд-быстроход";
 		this->vehicle_type = Vehicles::TV_GROUND;
 		this->registration = false;

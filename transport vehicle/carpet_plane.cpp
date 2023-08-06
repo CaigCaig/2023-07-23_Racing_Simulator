@@ -27,14 +27,6 @@ namespace Transport_Vehicles
 	}
 	Carpet_Plane::Carpet_Plane()
 	{
-		//this->tv_speed = 10;
-		//this->drc_1 = 0;
-		//this->drc_2 = 3;
-		//this->drc_3 = 10;
-		//this->drc_3 = 5;
-		//this->dist_1 = 1000;
-		//this->dist_2 = 5000;
-		//this->dist_3 = 10000;
 		this->name = "Ковёр-самолёт";
 		this->vehicle_type = Vehicles::TV_GROUND;
 		this->registration = false;
