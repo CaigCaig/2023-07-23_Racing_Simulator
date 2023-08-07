@@ -1,12 +1,12 @@
 #pragma once
-#include "transport vehicle.h"
+#include "transport_vehicle.h"
 #include "declspec.h"
 
 namespace Transport_Vehicles
 {
-	class Boots_ATVs : public Transport_Vehicle {
+	class TVLIB_API Boots_ATVs : public Transport_Vehicle {
 	public:
-		TVLIB_API Boots_ATVs();
-		TVLIB_API double Calc_Time(int dist);
+		Boots_ATVs();
+		double Calc_Time(int dist) override;
 	};
 }

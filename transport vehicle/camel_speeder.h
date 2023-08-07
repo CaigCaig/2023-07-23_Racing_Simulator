@@ -1,12 +1,12 @@
 #pragma once
-#include "transport vehicle.h"
+#include "transport_vehicle.h"
 #include "declspec.h"
 
 namespace Transport_Vehicles
 {
-	class Camel_Speeder : public Transport_Vehicle {
+	class TVLIB_API Camel_Speeder : public Transport_Vehicle {
 	public:
-		TVLIB_API Camel_Speeder();
-		TVLIB_API double Calc_Time(int dist);
+		Camel_Speeder();
+		double Calc_Time(int dist) override;
 	};
 }

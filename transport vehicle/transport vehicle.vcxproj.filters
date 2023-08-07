@@ -24,7 +24,7 @@
     <ClInclude Include="camel.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="transport vehicle.h">
+    <ClInclude Include="transport_vehicle.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="declspec.h">
@@ -56,7 +56,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="transport vehicle.cpp">
+    <ClCompile Include="transport_vehicle.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="camel.cpp">

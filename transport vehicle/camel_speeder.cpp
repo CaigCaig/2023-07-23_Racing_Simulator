@@ -12,12 +12,12 @@ namespace Transport_Vehicles
 			int speed = 40;
 			int rest_period = 10;
 			int interval = speed * rest_period;
-			int n_rests = dist / interval;
-			double remains = dist % interval;
+			int n_rests = static_cast<int>(dist / interval);
+			double remains = static_cast<double>(dist % interval);
 			time = static_cast<double>(dist) / speed;
 			if (n_rests > 2)
 			{
-				time +=  5 + 6.5 + 8 * (n_rests - 2);
+				time +=  5 + 6.5 + 8 * (static_cast<double>(n_rests) - 3);
 				if (remains > 0)
 				{
 					time += 8;
